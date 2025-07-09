@@ -25,7 +25,7 @@ struct Height {
     var heightInInches: Double {
         didSet {
             let expectedCentimeters = heightInInches * 2.54
-            if abs(heightInCentimeters - expectedCentimeters) > 0.00001 {
+            if (heightInCentimeters - expectedCentimeters) > 0.00001 {
                 heightInCentimeters = expectedCentimeters
             }
         }
@@ -34,7 +34,7 @@ struct Height {
     var heightInCentimeters: Double {
         didSet {
             let expectedInches = heightInCentimeters / 2.54
-            if abs(heightInInches - expectedInches) > 0.00001 {
+            if (heightInInches - expectedInches) > 0.00001 {
                 heightInInches = expectedInches
             }
         }

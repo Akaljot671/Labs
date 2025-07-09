@@ -39,6 +39,8 @@ struct Steps {
     }
     
 }
+var progress = Steps(steps: 9999, goal: 10000)
+progress.takeStep()
 
 
 /*:
