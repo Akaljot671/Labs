@@ -69,6 +69,15 @@ class QuestionViewController: UIViewController {
                 Answer (text: "I barely notice them", type: .turtle),
                 Answer (text: "I love them", type: .lion)
             ]
+        ),
+        Question(text: "What is your favorite color?", type: .single, answers: [
+                
+                Answer(text: "Red", type: .lion),
+                Answer(text: "Blue", type: .cat),
+                Answer(text: "Yellow", type: .rabbit),
+                Answer(text: "Green", type: .turtle)
+            
+            ]
         )
     ]
     
@@ -101,7 +110,7 @@ class QuestionViewController: UIViewController {
     }
     
     
-    @IBAction func multipleAnswerButtonPressed(_ sender: UISwitch) {
+    @IBAction func multipleAnswerButtonPressed(_ sender: UIButton) {
         
         let currentAnswers = questions[questionIndex].answers
         
@@ -122,24 +131,19 @@ class QuestionViewController: UIViewController {
             answerChosen.append(currentAnswers[3])
         }
         
-        
-    }
-    
-    @IBAction func multiSubmitButtonPressed(_ sender: UIButton) {
         nextQuestion()
     }
     
-    @IBAction func rangedAnswerButtonPressed(_ sender: UISlider) {
+
+    
+    @IBAction func rangedAnswerButtonPressed(_ sender: UIButton) {
         let currentAnswers = questions[questionIndex].answers
         let index = Int(round(rangedSlider.value * Float(currentAnswers.count - 1)))
         
         answerChosen.append(currentAnswers[index])
-
-    }
-    
-    @IBAction func rangedSubmitButtonPressed(_ sender: Any) {
         nextQuestion()
     }
+    
     
     
     @IBSegueAction func showResult(_ coder: NSCoder) -> ResultViewController? {

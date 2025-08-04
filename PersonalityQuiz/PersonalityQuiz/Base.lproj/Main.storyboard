@@ -107,9 +107,6 @@
                                             </label>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gBj-rB-j1F">
                                                 <rect key="frame" x="304" y="0.0" width="51" height="31"/>
-                                                <connections>
-                                                    <action selector="multipleAnswerButtonPressed:" destination="N9c-FB-ith" eventType="valueChanged" id="PiJ-nr-NE5"/>
-                                                </connections>
                                             </switch>
                                         </subviews>
                                     </stackView>
@@ -160,7 +157,7 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Submit Answer"/>
                                         <connections>
-                                            <action selector="multiSubmitButtonPressed:" destination="N9c-FB-ith" eventType="touchUpInside" id="yGK-TE-0aC"/>
+                                            <action selector="multipleAnswerButtonPressed:" destination="N9c-FB-ith" eventType="touchUpInside" id="sJy-JL-KIB"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -207,9 +204,6 @@
                                 <subviews>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="JLy-jF-yMY">
                                         <rect key="frame" x="-2" y="0.0" width="357" height="31"/>
-                                        <connections>
-                                            <action selector="rangedAnswerButtonPressed:" destination="N9c-FB-ith" eventType="valueChanged" id="n4M-Mh-dV5"/>
-                                        </connections>
                                     </slider>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="6MG-1Q-xgF">
                                         <rect key="frame" x="0.0" y="50" width="353" height="20.333333333333329"/>
@@ -233,7 +227,7 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Submit Answer"/>
                                         <connections>
-                                            <action selector="rangedSubmitButtonPressed:" destination="N9c-FB-ith" eventType="touchUpInside" id="4vd-Uk-O1M"/>
+                                            <action selector="rangedAnswerButtonPressed:" destination="N9c-FB-ith" eventType="touchUpInside" id="ej4-ys-aEj"/>
                                         </connections>
                                     </button>
                                 </subviews>
